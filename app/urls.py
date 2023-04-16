@@ -6,4 +6,5 @@ urlpatterns = [
     path('tarefas/', views.index),
     path('tarefas/delete/<slug:id>', views.delete_tarefa),
     path('', RedirectView.as_view(url='tarefas/'))
+    
 ]

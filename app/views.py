@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from .models import Tarefa
 from .forms import ConteudoForm
 
+
 def index(request):
-    conteudo = Tarefa.objects.all()
+    conteudo = Tarefa.objects.all()    
     form = ConteudoForm()
     if request.method=='POST':
         form= ConteudoForm(request.POST)
